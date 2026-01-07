@@ -29,7 +29,7 @@ pub(crate) struct FieldDedupFilter {
 impl Filter for FieldDedupFilter {
     #[inline]
     fn filter(&mut self, key: &Key) -> bool {
-        self.seen_keys.insert(*key)
+        self.seen_keys.insert(key.clone())
     }
 }
 
